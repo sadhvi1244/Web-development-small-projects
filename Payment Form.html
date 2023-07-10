@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment from</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+    <form action="">
+     <h1 class="main_heading">Payment from</h1>
+     <hr>
+     <!--Required Feilds are followed by *-->
+     <h2>User Information</h2>
+     <!--Required is used taki bina naam fill krne koi submit na krde-->
+     <!--* is used as term and condition i.e. requited to fill -->
+     <!--placeholder se kuch value dikh rahe hogi jo baad me replace ho jati h jb user apni koi value put krta h -->
+     <p>Name:*<input type="text" name="name" placeholder="xyz" required></p>
+     <!--male aur female ko sath me krne ke liye <feildset> tag ka use kete hai-->
+     <feildset>
+     <!--<legend> tag ka use hm isiliye krte h jo isko group kiye the uska naam aa jaiga-->
+            <legend>Gender*</legend>
+            <p>
+                 Male <input type="radio" name="gender" id="male" required> Female <input type="radio" name="gender" id="female" required>
+            </p>
+     </feildset>
+     <!--<textarea> tag ka use hm multiple lines likhna ka-->
+     <p>Address: <textarea placeholder="Enter your Address" name="address" id="address" cols="100" rows="8" ></textarea> </p>
+     <p> Email: <input type="email" name="email" id="email" required placeholder="xyz@gmail.com"></p>
+     <p>Pincode:  <input type="number" name="pincode" id="Pincode" required placeholder="123456"> </p>
+     <h2>Payment Information</h2>
+     <p>Card Type: 
+      <select name="card_type" id="card_type" required>
+         <option value="">--Select a Card Type--</option>
+         <option value="visa">Visa</option>
+         <option value="rupay">Rupay</option>
+         <option value="masterCard">MasterCard</option>
+        </select>
+     </p>
+     <p>
+        Card Number *<input type="number" name="card_number" id="card_number" required placeholder="1111-2222-3333-4444">
+     </p>
+     <p>
+         Expiration Date: <input type="date" name="exp_date" id="exp_date"required>
+     </p>
+     <p>
+        CVV  <input type="password" name="CVV" id="CVV"--Required placeholder="123">
+     </p>
+     <input type="submit" value="Pay Now">
+
+    </form>
+</div>
+</body>
+</html>  
